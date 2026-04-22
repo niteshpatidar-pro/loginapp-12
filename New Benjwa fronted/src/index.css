@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cbre-green: #006A4D;
+  --color-cbre-dark: #1a1a1a;
+  --color-cbre-gray: #4A4A4A;
+  --color-cbre-light: #F4F4F4;
+}
+
+@layer base {
+  body {
+    @apply bg-cbre-light text-cbre-dark transition-colors duration-300;
+  }
+  body.dark {
+    @apply bg-[#0f0f0f] text-white;
+  }
+}
+
+.cbre-input {
+  @apply w-full px-4 py-2 border rounded-md outline-none transition-all duration-200 focus:ring-2 focus:ring-cbre-green/50;
+}
+
+.cbre-btn-primary {
+  @apply bg-cbre-green text-white px-6 py-2 rounded-md font-medium hover:bg-[#005a41] transition-all duration-200 active:scale-95 disabled:opacity-50;
+}
+
+.cbre-card {
+  @apply bg-white p-8 rounded-lg shadow-xl border border-gray-100;
+}
+
+.dark .cbre-card {
+  @apply bg-[#1a1a1a] border-gray-800;
+}
+
+.dark .cbre-input {
+  @apply bg-[#2a2a2a] border-gray-700 text-white;
+}
