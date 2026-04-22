@@ -12,8 +12,7 @@ build/
 Thumbs.db
 
 # Environment variables
-# .env  <-- I will comment this out so your current .env stays if you want, 
-# but usually we ignore it. I'll ignore it for security by default.
+.env
 .env.local
 .env.development.local
 .env.test.local
